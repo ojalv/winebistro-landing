@@ -52,21 +52,49 @@
           </div>
         </article>
       </section>
-      <section class="slider">
-        <div class="slider">
-          <div class="img">img 1</div>
-          <div class="img">img 2</div>
-          <div class="img">img 3</div>
-          <div class="img">img 4</div>
-          <div class="img">img 5</div>
-          <div class="img">img 6</div>
-          <div class="img">img 7</div>
-          <div class="img">img 8</div>
-          <div class="img">img 9</div>
-          <div class="img">img 10</div>
-          <div class="img">img 11</div>
+      <section class="slider-content">
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide active">
+              <img src="assets/img/slider/slide-1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-3.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-4.jpg" alt="Slide 4">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-5.jpg" alt="Slide 5">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-6.jpg" alt="Slide 6">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-7.jpg" alt="Slide 7">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-8.jpg" alt="Slide 8">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-9.jpg" alt="Slide 9">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-10.jpg" alt="Slide 10">
+            </div>
+            <div class="slide">
+              <img src="assets/img/slider/slide-11.jpg" alt="Slide 11">
+            </div>
+          </div>
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+          <div class="dots"></div>
         </div>
-        <div class="selection"></div>
+      </section>
+
       </section>
       <section class="cta">
         <p>
@@ -104,5 +132,6 @@
         >
       </section>
     </main>
+    <script src="js/slider.js"></script>
   </body>
 </html>
