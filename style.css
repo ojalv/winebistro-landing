@@ -23,8 +23,8 @@ body {
   grid-template-areas:
     "header"
     "card-container"
-    "image-slider"
-    "cta-btn"
+    "slider"
+    "cta"
     "contact"
     "footer";
 }
@@ -118,11 +118,11 @@ font-size: 2.5rem;
   background-image: url("assets/img/card/img-4.png");
 }
 
-.image-slider {
-  grid-area: image-slide;
+.slider {
+  grid-area: slider;
 }
-.cta-btn {
-  grid-area: cta-btn;
+.cta {
+  grid-area: cta;
 }
 .contact {
   grid-area: contact;
