@@ -191,7 +191,53 @@ body {
 
 .cta {
   grid-area: cta;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
 }
+
+.cta .divider{
+
+  background-color: rgba(217, 201, 178,1); 
+  height: 2px;
+  width: 40%;
+  max-width: 500px;
+}
+
+.cta .divider:nth-child(1){
+  margin-bottom: 64px;
+}
+.cta .divider:last-child{
+  margin-top:64px;
+}
+
+.cta .content{
+  text-align: center;
+  font-weight: 200;
+  max-width: 500px;
+  padding: 0px 1rem;
+}
+
+.cta .button{
+  margin-top: 3rem;
+  padding: 12px 24px;
+  background-color: rgb(144, 50, 62);
+  text-decoration: none;
+  color: rgb(217, 201, 178);
+  font-weight: 500;
+transition: 0.3s;
+
+}
+.cta .button:hover{
+background-color: rgb(  94
+, 18, 24);
+transition: 0.3s;
+}
+
 .contact {
   grid-area: contact;
 }
