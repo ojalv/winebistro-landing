@@ -200,46 +200,82 @@ body {
   font-size: 25px;
 }
 
-.cta .divider{
-
-  background-color: rgba(217, 201, 178,1); 
+.cta .divider {
+  background-color: rgba(217, 201, 178, 1);
   height: 2px;
   width: 40%;
   max-width: 500px;
 }
 
-.cta .divider:nth-child(1){
+.cta .divider:nth-child(1) {
   margin-bottom: 64px;
 }
-.cta .divider:last-child{
-  margin-top:64px;
+.cta .divider:last-child {
+  margin-top: 64px;
 }
 
-.cta .content{
+.cta .content {
   text-align: center;
   font-weight: 200;
   max-width: 500px;
   padding: 0px 1rem;
 }
 
-.cta .button{
+.cta .button {
   margin-top: 3rem;
   padding: 12px 24px;
   background-color: rgb(144, 50, 62);
   text-decoration: none;
   color: rgb(217, 201, 178);
   font-weight: 500;
-transition: 0.3s;
-
+  transition: 0.3s;
 }
-.cta .button:hover{
-background-color: rgb(  94
-, 18, 24);
-transition: 0.3s;
+.cta .button:hover {
+  background-color: rgb(94, 18, 24);
+  transition: 0.3s;
 }
 
 .contact {
   grid-area: contact;
+  padding: 32px;
+  color: rgb(217, 201, 178);
+  font-size: 20px;
+}
+
+.contact h2 {
+  font-size: 3.3rem;
+}
+.contact .schedules {
+  margin-top: 2rem;
+}
+
+.contact .schedules h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact .schedules p {
+  margin-bottom: 0.8rem;
+}
+.contact .contact-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.contact .contact-information .line {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: baseline;
+  align-items: center;
+  height: 2rem;
+}
+.contact .contact-information .icon {
+  width: 30px;
+}
+.contact .contact-information a {
+  text-decoration: none;
+  color: rgb(217, 201, 178);
 }
 .footer {
   grid-area: footer;
