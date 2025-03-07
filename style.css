@@ -262,6 +262,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 .contact .contact-information .line {
   display: flex;
@@ -277,6 +278,18 @@ body {
   text-decoration: none;
   color: rgb(217, 201, 178);
 }
+
+.contact .big-logo{
+  background-color: rgb(94, 18, 24);
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
 .footer {
   grid-area: footer;
 }
