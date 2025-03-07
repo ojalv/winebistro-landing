@@ -13,7 +13,7 @@
 }
 
 body {
-  color: var(--color-1);
+  color: #D9C9B2;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url("assets/img/background.jpg");
 }
@@ -198,6 +198,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 25px;
+  color: #D9C9B2;
 }
 
 .cta .divider {
@@ -219,6 +220,7 @@ body {
   font-weight: 200;
   max-width: 500px;
   padding: 0px 1rem;
+  line-height: 25px;
 }
 
 .cta .button {
