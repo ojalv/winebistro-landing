@@ -292,4 +292,14 @@ body {
 
 .footer {
   grid-area: footer;
+  background-color: #0C0C0C;
+  color: #555;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.footer a {
+  color: rgb(94, 18, 24);
+  text-decoration: none;
+
 }
