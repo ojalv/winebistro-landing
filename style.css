@@ -458,4 +458,21 @@ body {
   .slider-content .next {
     right: 2vw;
   }
+
+  .cta {
+    font-size: 50px;
+  }
+
+  .cta .divider {
+    background-color: rgba(217, 201, 178, 1);
+    height: 2px;
+    width: 40%;
+    max-width: 900px;
+  }
+
+  .cta .content {
+    width: 70%;
+    max-width: 900px;
+    line-height: 50px;
+  }
 }
