@@ -1,22 +1,36 @@
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");
 const dotsContainer = document.querySelector(".dots");
+const viewPortWidth = window.innerWidth;
 
 let currentIndex = 0;
 
 // Create dynamic indicator dots
-slides.forEach((_, index) => {
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
-  dot.addEventListener("click", () => goToSlide(index));
-  dotsContainer.appendChild(dot);
-});
+if (viewPortWidth < 767) {
+  slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    dot.addEventListener("click", () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+} else {
+  for (let index = 0; index < slides.length - 2; index++) {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    dot.addEventListener("click", () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  }
+}
 
 const dots = document.querySelectorAll(".dot");
 
 function updateSlider() {
   // Move the slider horizontally
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  if (viewPortWidth < 767) {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  } else {
+    slider.style.transform = `translateX(calc(-${currentIndex * 100}%/3))`;
+  }
 
   // Update active dots
   dots.forEach((dot, index) => {
@@ -25,7 +39,13 @@ function updateSlider() {
 }
 
 function moveSlide(step) {
-  currentIndex = (currentIndex + step + slides.length) % slides.length;
+  if (viewPortWidth < 767) {
+    const maxIndex = slides.length - 2;
+    currentIndex = Math.min(maxIndex, Math.max(0, currentIndex + step));
+  } else {
+    currentIndex = (currentIndex + step + dots.length) % dots.length;
+  }
+
   updateSlider();
 }
 

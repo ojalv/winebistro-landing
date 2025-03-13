@@ -438,4 +438,21 @@ body {
   .card-2:nth-child(8) {
     background-image: url("assets/img/card/img-4.png");
   }
+
+  .slider-content .slide {
+    min-width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-content img {
+    width: 90%;
+    display: block;
+  }
+
+  .slider-content .slide:first-child {
+    margin-left: 0px;
+  }
+
 }
