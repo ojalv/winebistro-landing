@@ -39,11 +39,15 @@ function updateSlider() {
 }
 
 function moveSlide(step) {
-  if (viewPortWidth < 767) {
-    const maxIndex = slides.length - 2;
-    currentIndex = Math.min(maxIndex, Math.max(0, currentIndex + step));
+  if (viewPortWidth > 767) {
+    if (viewPortWidth < 767) {
+      const maxIndex = slides.length - 2;
+      currentIndex = Math.min(maxIndex, Math.max(0, currentIndex + step));
+    } else {
+      currentIndex = (currentIndex + step + dots.length) % dots.length;
+    }
   } else {
-    currentIndex = (currentIndex + step + dots.length) % dots.length;
+    currentIndex = (currentIndex + step + slides.length) % slides.length;
   }
 
   updateSlider();
