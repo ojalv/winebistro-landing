@@ -37,7 +37,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.logo-and-slogan--desktop {
+  display: none;
+}
 .header .logo-and-slogan--mobile {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
