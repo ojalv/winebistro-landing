@@ -508,4 +508,9 @@ body {
     max-width: 500px;
     justify-self: right;
   }
+
+  .footer{
+    text-align: center;
+    font-size: 1rem;
+  }
 }
