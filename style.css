@@ -375,6 +375,8 @@ body {
     background-position-y: 50%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-size: 110%;
+    text-align: center;
   }
 
   .card-2 > .container {
