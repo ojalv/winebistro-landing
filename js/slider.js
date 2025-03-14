@@ -4,7 +4,7 @@ function initializeSlider() {
   slider = document.querySelector(".slider");
   slides = document.querySelectorAll(".slide");
   dotsContainer = document.querySelector(".dots");
-  
+
   let viewPortWidth = window.innerWidth;
   currentIndex = 0;
   dotsContainer.innerHTML = "";
@@ -62,5 +62,9 @@ function goToSlide(index) {
   updateSlider();
 }
 
+function autoClick() {
+  document.querySelector("button.next").click();
+}
+setInterval(autoClick, 3500);
 initializeSlider();
 window.addEventListener("resize", initializeSlider);
