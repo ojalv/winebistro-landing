@@ -1,44 +1,48 @@
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
-const dotsContainer = document.querySelector(".dots");
-const viewPortWidth = window.innerWidth;
+let slider, slides, dotsContainer, dots, currentIndex;
 
-let currentIndex = 0;
+function initializeSlider() {
+  slider = document.querySelector(".slider");
+  slides = document.querySelectorAll(".slide");
+  dotsContainer = document.querySelector(".dots");
+  
+  let viewPortWidth = window.innerWidth;
+  currentIndex = 0;
+  dotsContainer.innerHTML = "";
 
-// Create dynamic indicator dots
-if (viewPortWidth < 767) {
-  slides.forEach((_, index) => {
-    const dot = document.createElement("span");
-    dot.classList.add("dot");
-    dot.addEventListener("click", () => goToSlide(index));
-    dotsContainer.appendChild(dot);
-  });
-} else {
-  for (let index = 0; index < slides.length - 2; index++) {
-    const dot = document.createElement("span");
-    dot.classList.add("dot");
-    dot.addEventListener("click", () => goToSlide(index));
-    dotsContainer.appendChild(dot);
+  if (viewPortWidth < 767) {
+    slides.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+  } else {
+    for (let index = 0; index < slides.length - 2; index++) {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    }
   }
+  dots = document.querySelectorAll(".dot");
+  updateSlider();
 }
 
-const dots = document.querySelectorAll(".dot");
-
 function updateSlider() {
-  // Move the slider horizontally
+  let viewPortWidth = window.innerWidth;
   if (viewPortWidth < 767) {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
   } else {
     slider.style.transform = `translateX(calc(-${currentIndex * 100}%/3))`;
   }
 
-  // Update active dots
   dots.forEach((dot, index) => {
     dot.classList.toggle("active", index === currentIndex);
   });
 }
 
 function moveSlide(step) {
+  let viewPortWidth = window.innerWidth;
   if (viewPortWidth > 767) {
     if (viewPortWidth < 767) {
       const maxIndex = slides.length - 2;
@@ -58,5 +62,5 @@ function goToSlide(index) {
   updateSlider();
 }
 
-// Initialize the slider
-updateSlider();
+initializeSlider();
+window.addEventListener("resize", initializeSlider);
